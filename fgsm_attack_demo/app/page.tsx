@@ -21,7 +21,7 @@ export default function Home() {
     formData.append("epsilon", epsilon.toString());
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/attack", {
+      const res = await fetch("http://<EC2_PUBLIC_IP>:8000/attack", {
         method: "POST",
         body: formData,
       });
